@@ -8,3 +8,18 @@ body {
 	height: 500px;
 	display: grid;
 }
+
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.buttons,
+.board-size {
+	display: flex;
+	/* flex-direction: column; */
+	justify-content: center;
+	align-items: center;
+}
