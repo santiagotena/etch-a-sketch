@@ -1,3 +1,5 @@
+let color = 'black';
+
 function populateBoard(size) {
 	let board = document.querySelector('.board');
 	let squares = board.querySelectorAll('div');
@@ -7,10 +9,8 @@ function populateBoard(size) {
 	
 	for (let i = 0; i < (size*size); i++) {
 		let square = document.createElement('div');
-		square.addEventListener("mouseover", () => {
-			square.style.backgroundColor = 'black';
-		})
-		square.style.backgroundColor = 'blue';
+		square.addEventListener("mouseover", colorSquare)
+		square.style.backgroundColor = 'white';
 		board.insertAdjacentElement('beforeend', square);
 	}
 }
@@ -22,4 +22,17 @@ function changeSize(input) {
 		populateBoard(input);
 	else
 		console.log('Invalid number of squares');
+}
+
+function colorSquare() {
+	if (color === 'random')
+		this.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`
+	else
+		this.style.backgroundColor = color;
+	
+
+}
+
+function changeColor(choice) {
+	color = choice;
 }
