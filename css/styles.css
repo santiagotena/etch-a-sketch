@@ -1,33 +1,52 @@
 body {
-	color: white;
-	background-color: gray;
+height: 100vh;
+width: 100vw;
+color: black;
+background: linear-gradient(rgba(40, 26, 232, 0.082), white);
 }
-
 .flex-container {
-	height: 100vh;
-	width: 100vw;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
 	align-items: center;
 }
-
 .board {
-	width: 500px;
-	height: 500px;
+	width: 80%;
+	height: 80%;
 	display: grid;
+	box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1),
+	 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
-
-.buttons,
-.mode,
-.board-size,
-.error {
+.board:hover {
+	cursor: pointer;
+}
+.content {
+	width: 60vw;
+	height: 60vw;
+	min-width: 300px;
+	min-height: 300px;
+	max-width: 600px;
+	max-height: 600px;
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
 }
-
+.buttons {
+	margin-top: 15px;
+	margin-bottom: 10px;
+}
+button {
+	padding: 0.3em 1.2em;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 2em;
+	font-weight: 600;
+}
+.mode {
+	margin-top: -15px;
+	margin-bottom: 10px;
+}
+input {
+	width: 25px;
+}
 .error {
 	display: none;
 }
-
