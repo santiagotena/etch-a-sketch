@@ -19,11 +19,13 @@ function populateBoard(size) {
 
 function changeSize(input) {
 	if (input >= 2 && input <= 100) {
+		document.querySelector('.error').style.display = 'none';
 		populateBoard(input);
 		size = input;
+	} else {
+		document.querySelector('.error').style.display = 'flex';
+		console.log('Invalid number of squares');
 	}
-	else
-	console.log('Invalid number of squares');
 }
 
 function colorSquare() {
@@ -44,7 +46,7 @@ function resetBoard(size) {
 }
 
 document.querySelector('body').addEventListener('click', (e) => {
-	if (e.target.tagName != 'BUTTON')
+	if (e.target.tagName != 'BUTTON' && e.target.tagName != 'INPUT')
 	{
 		click = !click;
 		if (click)
