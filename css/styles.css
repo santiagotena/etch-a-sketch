@@ -17,9 +17,9 @@ body {
 }
 
 .buttons,
+.mode,
 .board-size {
 	display: flex;
-	/* flex-direction: column; */
 	justify-content: center;
 	align-items: center;
 }
